@@ -21,6 +21,7 @@ public class Project004 {
 			}
 		}
 		System.out.println(largest);
+		//answer of 906609 is correct.
 
 	}
 	public static boolean checkPalindrome(int A) {
