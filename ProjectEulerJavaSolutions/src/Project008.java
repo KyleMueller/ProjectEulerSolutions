@@ -23,7 +23,7 @@ public class Project008 {
 				"84580156166097919133875499200524063689912560717606"+
 				"05886116467109405077541002256983155200055935729725"+
 				"71636269561882670428252483600823257530420752963450";
-		long largest = 0;
+		long largest = 0;  
 		for(int i = 0; i < (str.length() - 13); i++) {
 			String sub = str.substring(i,i+13);
 			long currentProd = 1;
