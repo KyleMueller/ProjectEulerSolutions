@@ -22,7 +22,6 @@ What is the value of the first triangle number to have over five hundred divisor
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int count = 1;
-		System.out.println(divCount(528));
 		while(true) {
 			int sum = 0;
 			for(int i = 1; i <= count; i++) {
@@ -37,6 +36,9 @@ What is the value of the first triangle number to have over five hundred divisor
 				count++;
 			}
 		}
+		//ans: 76576500 is correct but took 12 minutes
+		//effectively the brute force strat
+		//
 
 
 	}
