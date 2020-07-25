@@ -1,4 +1,3 @@
-import java.math.BigInteger;
 
 public class Project010 {
 	/**
