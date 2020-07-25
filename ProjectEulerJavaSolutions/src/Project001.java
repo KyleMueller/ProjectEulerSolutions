@@ -12,6 +12,7 @@ public class Project001 {
 		System.out.println(sum);
 		//solution of 233168 is correct
 
+		
 	}
 
 }
