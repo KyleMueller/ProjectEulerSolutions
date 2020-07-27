@@ -10,25 +10,33 @@ public class Project003 {
 	 */
 
 	public static void main(String[] args) {
-		BigInteger a = new BigInteger("2");
 		BigInteger b = new BigInteger("600851475143");
-		BigInteger ans = new BigInteger("0");
-		BigInteger one = new BigInteger("1");
-		int i = 1;
-		while(true) {
-			if(checkPrime(b)) {
-				break;
-			}
-			else {
-				while(true) {
-					
+		int largest = 0;
+		for(int i = 2; i< 10000; i++) {
+			BigInteger j = new BigInteger(i + "");
+			//System.out.println(j);
+			BigInteger zero = new BigInteger("0");
+			BigInteger one = new BigInteger("1");
+			if(b.mod(j).equals(zero)) {
+				//found a prime
+				//check if largest
+				if(i > largest) {largest = i;}
+				//set new b
+				b = b.divide(j);
+				//System.out.println(b);
+				if(b.equals(one)) {
+					//if we found last prime, break out
+					break;
 				}
+				
+				//set i back to 1 (2 when for loop starts again)
+				i = 1;
 			}
 		}
-			
-
+		System.out.println(largest);
 	}
 
+	//from failed idea, maybe reasourceful later
 	public static boolean checkPrime(BigInteger A) {
 		BigInteger i = new BigInteger("2");
 		while(!i.equals(A)) {
