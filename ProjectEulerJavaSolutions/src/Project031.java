@@ -36,7 +36,8 @@ How many different ways can £2 be made using any number of coins?
 			}
 		}
 		System.out.println(count);
-
+		//73682 is the right answer
+		//first try mate.
 	}
 
 }
