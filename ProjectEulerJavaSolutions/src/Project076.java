@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+
 
 public class Project076 {
 	/**
@@ -18,7 +18,7 @@ least two positive integers?
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int num = 7;
+		int num = 100;
 		int[] ways = new int[num + 1];
 		ways[0] = 1;
 		 
