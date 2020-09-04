@@ -13,20 +13,24 @@ such that for every divisor d of n, d+n/d is prime.
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BigInteger sum = new BigInteger("0");
+		BigInteger sum = new BigInteger("1");
 		for(int i = 1; i < 100000000; i++) {
+			if((i-1)%4 == 0 || (i-1)%2 == 1) {
+				if (i % 1000000 == 0) {
+					System.out.println("Percent: " + i / 1000000);
+				}
+				continue;
+			}
 			if (isPrime(i)) {
 				if (isPrimeGen(i - 1)) {
 					sum = sum.add(new BigInteger((i - 1) + ""));
 				}
 			}
-			if (i % 1000000 == 0) {
-				System.out.println("Percent: " + i / 1000000);
-			}
 		}
 		System.out.println("answer: " + sum);
 		//answer is 1739023853137 (long long bruteforce)
 		//might revamp this later
+		//revamp includes removing all odds and nums divisible by 4
 	}
 	
 	public static boolean isPrimeGen(int a) {
